@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balqis Winda Amaliah | Portfolio</title>
+
+  <!-- Google Font: Plus Jakarta Sans untuk tipografi modern dan bersih -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Anton&family=Great+Vibes&display=swap" rel="stylesheet">
+ 
+
+  <!-- Bootstrap v5.3 CSS (Resmi CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons CDN (Resmi) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CSS kustom (dimuat SETELAH Bootstrap supaya bisa menimpa gaya bawaan) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. AWAL NAVBAR: Sticky Top Navbar dengan Background Blur
+       ========================================================================== -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-glass py-3">
+      <div class="container">
+        <!-- NAMA BRAND / LOGO PORTFOLIO -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+          <i class="bi bi-code-slash text-info"></i>
+          <span>Balqis winda  Amaliah</span>
+        </a>
+
+        <!-- TOMBOL TOGGLER MOBILE (RESPONSIVE) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPortfolioNav" aria-controls="navbarPortfolioNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- DAFTAR LINK NAVIGASI -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarPortfolioNav">
+          <ul class="navbar-nav gap-1 mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projek">Projek</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- AKHIR NAVBAR -->
+
+
+  <main class="container my-4 my-md-5">
+
+    <!-- ==========================================================================
+         2. AWAL SECTION: HOME (Profil Utama & Greeting)
+         Aturan Animasi: Fade-in dan Scale-up langsung saat halaman dimuat
+         ===============================================
+         =========================== -->
+    <section id="home" class="py-4 py-md-5">
+      <!-- HOME TANPA KOTAK: elemen langsung di atas gambar latar -->
+      <div class="home-hero home-animated-entry">
+
+        <!-- TULISAN BESAR DI BELAKANG FOTO (GANTI KATA "PORTOFOLIO" JIKA PERLU) -->
+        <div class="home-hero-bgtext" aria-hidden="true">PORTOFOLIO</div>
+
+        <div class="row align-items-end g-0 position-relative">
+
+          <!-- KOLOM TEKS: sapaan, nama, bidang, deskripsi, tombol -->
+          <div class="col-12 col-lg-5 order-2 order-lg-1 home-hero-teks text-center text-lg-start pb-lg-4 pt-3">
+            <!-- GANTI TEKS SAPAAN DI SINI -->
+            <h1 class="home-hero-nama text-white">Balqis Winda<br>Amaliah</h1>
+            
+            <!-- GANTI PARAGRAF BIOGRAFI SINGKAT DI SINI -->
+            <p class="home-hero-deskripsi text-light mx-auto mx-lg-0">
+              Terus belajar, mengeksplorasi hal baru, dan mengembangkan keterampilan serta memperluas pengalaman di bidang Sistem Informasi untuk menghadapi tantangan di era digital.
+            </p>
+
+            <!-- TOMBOL AKSI (ACTION BUTTONS) -->
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4">
+              <a href="#projek" class="btn btn-glass-primary d-inline-flex align-items-center gap-2">
+                <i class="bi bi-grid-fill"></i>
+                <span>Lihat Portofolio</span>
+              </a>
+              <a href="#kontak" class="btn btn-glass-outline d-inline-flex align-items-center gap-2">
+                <i class="bi bi-chat-dots-fill"></i>
+                <span>Kontak</span>
+              </a>
+            </div>
+
+            <div class="small text-white-50 d-inline-flex align-items-center gap-2">
+              <i class="bi bi-globe2 text-info"></i>
+              <span>Terbuka untuk peluang baru</span>
+            </div>
+          </div>
+
+          <!-- KOLOM FOTO: foto orang tanpa latar (PNG transparan) paling bagus -->
+          <div class="col-12 col-lg-7 order-1 order-lg-2 text-center">
+            <!-- GANTI FOTO PROFIL DI SINI: pakai PNG transparan (hapus latar foto), lalu hapus class "foto-placeholder" -->
+            <img
+              src="foto/foto-balqis-w.png"
+              alt="Foto Profil Balqis Winda Amaliah"
+              class="home-hero-foto"
+            >
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- AKHIR SECTION: HOME -->
+
+
+    <!-- ==========================================================================
+         3. AWAL SECTION: ABOUT (Tentang Saya)
+         Aturan Animasi: Fade-in dan Slide-up saat di-scroll ke area tampilan
+         ========================================================================== -->
+    <section id="about" class="py-4 py-md-5">
+      <!-- Container dengan class 'scroll-reveal' untuk memicu Intersection Observer -->
+      <div class="glass-card p-4 p-md-5 scroll-reveal">
+        <div class="row align-items-center g-4">
+          
+          <!-- KOLOM KIRI: Foto Profil Bulat -->
+          <!-- GANTI FOTO TENTANG SAYA DI SINI -->
+          <div class="col-12 col-md-5 col-lg-4 text-center">
+            <img 
+              src="foto/foto-balqis-w.png" 
+              alt="Foto Tentang Saya" 
+              class="about-avatar"
+            >
+          </div>
+
+          <!-- KOLOM KANAN: Heading & Deskripsi Personal -->
+          <!-- GANTI KONTEN DESKRIPSI TENTANG SAYA DI SINI -->
+          <div class="col-12 col-md-7 col-lg-8">
+            <div class="d-inline-block px-3 py-1 mb-3 rounded-pill glass-inner-box text-uppercase fw-bold text-info" style="font-size: 0.85rem; letter-spacing: 1px;">
+              About Me
+            </div>
+            <h2 class="h2 fw-bold text-white mb-3">Tentang Saya</h2>
+            <p class="text-light mb-3" style="font-size: 1.05rem; line-height: 1.8; opacity: 0.95;">
+              Sebagai mahasiswa Sistem Informasi semester 3 di Universitas PGRI Delta, saya memiliki ketertarikan pada pengembangan web dan berkomitmen untuk terus belajar, memperluas pemahaman, serta mengeksplorasi berbagai tools dan teknologi. Tidak hanya memahami cara kerjanya, saya juga ingin mengembangkan ide-ide kreatif dan menciptakan inovasi yang bermanfaat.
+            </p>
+
+
+            <!-- Poin Info Singkat / Highlight -->
+            <div class="row g-3 pt-2">
+              <div class="col-sm-6">
+                <div class="p-3 glass-inner-box d-flex align-items-center gap-3">
+                  <i class="bi bi-mortarboard-fill fs-3 text-info"></i>
+                  <div>
+                    <div class="text-white-50 small">Pendidikan</div>
+                    <div class="fw-semibold text-white">Sistem Informasi</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 glass-inner-box d-flex align-items-center gap-3">
+                  <i class="bi bi-briefcase-fill fs-3 text-info"></i>
+                  <div>
+                    <div class="text-white-50 small">Fokus Bidang</div>
+                    <div class="fw-semibold text-white">Web Development</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- AKHIR SECTION: ABOUT -->
+
+
+    <!-- ==========================================================================
+         4. AWAL SECTION: SKILLS & TECHNOLOGY (Keahlian & Teknologi)
+         ATURAN KHUSUS: Bagian ini WAJIB STATIS (TANPA ANIMASI LOAD ATAU SCROLL)
+         ========================================================================== -->
+    <section id="skills" class="py-4 py-md-5">
+      <div class="text-center">
+        <span class="section-title-badge">Skills & Technology</span>
+      </div>
+
+      <!-- Grid Bootstrap 5.3 Menampilkan Kartu Kaca Teknologi dengan Bootstrap Icons -->
+      <!-- BAGIAN INI STATIS TANPA CLASS SCROLL-REVEAL -->
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 justify-content-center">
+        
+        <!-- SKILL 1: Python -->
+        <div class="col">
+          <div class="skill-card h-100">
+            <i class="bi bi-filetype-py skill-icon text-info"></i>
+            <p class="skill-name">Python</p>
+          </div>
+        </div>
+
+        <!-- SKILL 2: PostgreSQL -->
+        <div class="col">
+          <div class="skill-card h-100">
+            <i class="bi bi-database-fill skill-icon text-primary"></i>
+            <p class="skill-name">PostgreSQL</p>
+          </div>
+        </div>
+
+        <!-- SKILL 3: Git & GitHub -->
+        <div class="col">
+          <div class="skill-card h-100">
+            <i class="bi bi-github skill-icon text-light"></i>
+            <p class="skill-name">Git & GitHub</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- AKHIR SECTION: SKILLS & TECHNOLOGY -->
+
+
+    <!-- ==========================================================================
+         6. AWAL SECTION: PROJEK (Grid 2-Kolom Responsive Bootstrap 5.3)
+         Aturan Animasi: Fade-in dan Slide-up saat di-scroll ke area tampilan
+         ========================================================================== -->
+    <section id="projek" class="py-4 py-md-5">
+      <div class="text-center">
+        <span class="section-title-badge">Projek</span>
+      </div>
+
+      <!-- Satu projek saja, ditaruh di tengah (col-lg-8) -->
+      <div class="row justify-content-center g-4">
+
+        <!-- PROJEK: Sistem Inventaris Toko Sembako -->
+        <div class="col-12 col-lg-8">
+          <!-- Class 'scroll-reveal' memicu animasi slide up dari bawah -->
+          <div class="project-card glass-card-interactive scroll-reveal">
+
+        
+        <!-- GAMBAR PROYEK INVENTARIS -->
+        <div class="project-img-wrapper"
+            style="height: auto; overflow: hidden;">
+
+          <img
+            src="projek/projek inventaris.png"
+            alt="Tampilan Dashboard Sistem Inventaris Toko Sembako"
+            style="width: 100%; height: auto; max-height: 320px; object-fit: contain; display: block; margin: 0 auto;"
+          >
+
+        </div>
+
+
+            <!-- KONTEN PROJEK -->
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h3 class="h4 fw-bold text-white mb-0">Sistem Inventaris Toko Sembako</h3>
+                <!-- GANTI href di bawah dengan link repository GitHub projek ini -->
+                <a href="https://github.com/balqiswinda7-eng" target="_blank" rel="noopener noreferrer" class="text-info text-decoration-none" title="Lihat di GitHub">
+                  <i class="bi bi-github fs-5"></i>
+                </a>
+              </div>
+
+              <!-- DESKRIPSI PROJEK -->
+              <p class="text-light small mb-3 flex-grow-1" style="opacity: 0.9; line-height: 1.6;">
+                Aplikasi desktop untuk mengelola stok barang di toko sembako. Pengguna bisa menambah barang, mencari barang berdasarkan kode, memperbarui stok, dan menghapus barang, sementara dashboard menampilkan jumlah jenis barang dan total stok. Semua data disimpan permanen di database SQLite, jadi tetap ada setelah aplikasi ditutup.
+              </p>
+
+              <!-- BADGE TEKNOLOGI -->
+              <div class="d-flex flex-wrap gap-2 pt-2 border-top border-white border-opacity-10">
+                <span class="badge badge-glass">Python</span>
+                <span class="badge badge-glass">CustomTkinter</span>
+                <span class="badge badge-glass">SQLite</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- AKHIR SECTION: PROJEK -->
+
+
+    <!-- ==========================================================================
+         7. AWAL SECTION: KONTAK & PENUTUP (Call to Action & Kontak Langsung)
+         Aturan Animasi: Fade-in dan Slide-up saat di-scroll ke area tampilan
+         ========================================================================== -->
+    <section id="kontak" class="py-4 py-md-5">
+      <!-- Container dengan class 'scroll-reveal' -->
+      <div class="glass-card p-4 p-md-5 scroll-reveal">
+        <div class="row align-items-center g-4">
+          
+          <!-- SISI KIRI: Ajakan Terbuka / Call-to-Action -->
+          <!-- GANTI TEKS AJAKAN / CTA DI SINI -->
+          <div class="col-12 col-lg-6">
+            <h2 class="display-6 fw-bold text-white mb-3">Terbuka untuk Peluang Baru</h2>
+            <p class="text-light lead mb-4" style="font-size: 1.15rem; line-height: 1.8; opacity: 0.92;">
+              Siap memperluas pengalaman, membangun koneksi, dan berkolaborasi dalam berbagai kesempatan yang mendukung pengembangan diri.
+            </p>
+            <p class="text-white-50 small mb-0">
+              Jangan ragu untuk menghubungi saya melalui kontak di samping atau melalui jaringan media sosial.
+            </p>
+          </div>
+
+          <!-- SISI KANAN: Kontak Langsung & Ikon Sosial Bootstrap -->
+          <!-- GANTI EMAIL, TELEPON, LOKASI, DAN LINK SOSIAL DI SINI -->
+          <div class="col-12 col-lg-6">
+            <div class="glass-inner-box p-4">
+              <h3 class="h5 fw-bold text-white mb-4 d-flex align-items-center gap-2">
+                <span>Hubungi Saya</span>
+              </h3>
+
+              <!-- Informasi Kontak Langsung -->
+              <div class="d-flex flex-column gap-3 mb-4">
+                
+                <!-- Email -->
+                <div class="d-flex align-items-center gap-3">
+                  <div class="social-icon-btn text-info" style="pointer-events: none;">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  <div>
+                    <div class="text-white-50 small">Email</div>
+                    <a href="mailto:balqiswinda7@gmail.com" class="text-white text-decoration-none fw-semibold">
+                      balqiswinda7@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Telepon / WhatsApp -->
+                <div class="d-flex align-items-center gap-3">
+                  <div class="social-icon-btn text-success" style="pointer-events: none;">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                  <div>
+                    <div class="text-white-50 small">Telepon / WhatsApp</div>
+                    <a href="tel:+6285706715894" class="text-white text-decoration-none fw-semibold">
+                      +62 857-0671-5894
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Lokasi -->
+                <div class="d-flex align-items-center gap-3">
+                  <div class="social-icon-btn text-warning" style="pointer-events: none;">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div>
+                    <div class="text-white-50 small">Lokasi</div>
+                    <span class="text-white fw-semibold">Sidoarjo, jawa timur, Indonesia</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Ikon Sosial Media Bootstrap Resmi -->
+              <div class="pt-3 border-top border-white border-opacity-10">
+                <div class="text-white-50 small mb-2">Terhubung di Media Sosial:</div>
+                <div class="d-flex align-items-center gap-2">
+                  <a href="https://github.com/balqiswinda7-eng" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+
+                  <a href="https://www.instagram.com/windaamalia___?psln=MW9lZ2l5Y3UxcDc5dQ==" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+              
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- AKHIR SECTION: KONTAK & PENUTUP -->
+
+  </main>
+
+
+  <!-- ==========================================================================
+       8. AWAL FOOTER: Hak Cipta & Penutup Halaman
+       ========================================================================== -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <div class="glass-card py-3 px-4 d-inline-block">
+        <p class="mb-0 text-white-50 small">
+          &copy; <span id="currentYear"></span> <strong>Balqis Winda Amaliah</strong>. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- AKHIR FOOTER -->
+
+
+  <!-- ==========================================================================
+       BOOTSTRAP v5.3 BUNDLE JS (Resmi CDN)
+       ========================================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- ==========================================================================
+       JAVASCRIPT ANIMATION ENGINE: INTERSECTION OBSERVER API (kodenya ada di js/script.js)
+       Script ringan Vanilla JS untuk mendeteksi elemen saat di-scroll
+       dan menambahkan kelas CSS aktif (.is-visible)
+       ========================================================================== -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
